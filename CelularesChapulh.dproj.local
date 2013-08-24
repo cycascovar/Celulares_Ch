@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/08/13 12:20:08.000.144,=C:\Users\Christian\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/13 12:20:42.000.156,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Login.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2013/08/13 12:20:42.000.156,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Login.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/13 12:24:18.000.379,=C:\Users\Christian\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2013/08/13 12:24:31.000.875,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\splashScreen.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2013/08/13 12:24:31.000.875,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\splashScreen.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2013/08/13 12:25:02.000.249,=C:\Users\Christian\Documents\RAD Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2013/08/13 12:25:16.000.518,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Principal_Empleados.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2013/08/13 12:25:16.000.518,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Principal_Empleados.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2013/08/13 14:46:23.000.290,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\CelularesChapulh.dproj=C:\Users\Christian\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2013/08/13 19:52:53.000.737,=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas</Transaction>
+    <Transaction>2013/08/13 19:53:16.000.276,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FGarantia.pas</Transaction>
+    <Transaction>2013/08/13 19:53:16.000.276,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FGarantia.dfm</Transaction>
+    <Transaction>2013/08/13 19:54:07.000.975,=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas</Transaction>
+    <Transaction>2013/08/13 19:54:15.000.409,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparaciones.pas</Transaction>
+    <Transaction>2013/08/13 19:54:15.000.409,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparaciones.dfm</Transaction>
+    <Transaction>2013/08/13 19:54:32.000.090,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparaciones.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacion.pas</Transaction>
+    <Transaction>2013/08/13 19:54:32.000.090,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparaciones.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacion.dfm</Transaction>
+    <Transaction>2013/08/13 19:56:49.000.094,=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas</Transaction>
+    <Transaction>2013/08/13 19:56:57.000.759,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FGarantia_Alta.dfm</Transaction>
+    <Transaction>2013/08/13 19:56:57.000.759,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FGarantia_Alta.pas</Transaction>
+    <Transaction>2013/08/13 19:57:43.000.239,=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas</Transaction>
+    <Transaction>2013/08/13 19:58:07.000.358,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacionAltas.pas</Transaction>
+    <Transaction>2013/08/13 19:58:07.000.358,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit4.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacionAltas.dfm</Transaction>
+    <Transaction>2013/08/13 19:58:22.000.785,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacionAltas.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacion_Alta.pas</Transaction>
+    <Transaction>2013/08/13 19:58:22.000.785,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacionAltas.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FReparacion_Alta.dfm</Transaction>
+    <Transaction>2013/08/13 21:09:20.000.307,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FPrincipalEmpleados.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Principal_Empleados.dfm</Transaction>
+    <Transaction>2013/08/13 21:09:20.000.307,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FPrincipalEmpleados.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\F_Principal_Empleados.pas</Transaction>
+    <Transaction>2013/08/13 22:18:16.000.117,=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit3.pas</Transaction>
+    <Transaction>2013/08/13 22:19:01.000.248,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FAlmacen_Local.pas=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit3.pas</Transaction>
+    <Transaction>2013/08/13 22:19:01.000.248,C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\FAlmacen_Local.dfm=C:\Users\Christian\Documents\RAD Studio\Projects\Celulares chapulh\Unit3.dfm</Transaction>
+    <Transaction>2013/08/23 19:27:17.000.647,=G:\uaeh\Proyecto de fin de carrera I\Proyecto\Celulares chapulh\Unit1.pas</Transaction>
+    <Transaction>2013/08/23 19:33:53.000.756,G:\uaeh\Proyecto de fin de carrera I\Proyecto\Celulares chapulh\Unit1.pas=G:\uaeh\Proyecto de fin de carrera I\Proyecto\Celulares chapulh\FAlmacen_Venta.pas</Transaction>
+    <Transaction>2013/08/23 19:33:53.000.756,G:\uaeh\Proyecto de fin de carrera I\Proyecto\Celulares chapulh\Unit1.dfm=G:\uaeh\Proyecto de fin de carrera I\Proyecto\Celulares chapulh\FAlmacen_Venta.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="FAlmacen_Local.pas"/>
+    <File Path="FAlmacen_Local.dfm"/>
+    <File Path="FGarantia.pas"/>
+    <File Path="FGarantia.dfm"/>
+    <File Path="FGarantia_Alta.pas"/>
+    <File Path="FGarantia_Alta.dfm"/>
+    <File Path="FPrincipalEmpleados.pas"/>
+    <File Path="FPrincipalEmpleados.dfm"/>
+    <File Path="FReparacion.pas"/>
+    <File Path="FReparacion.dfm"/>
+    <File Path="FReparacion_Alta.pas"/>
+    <File Path="FReparacion_Alta.dfm"/>
+    <File Path="F_Login.pas"/>
+    <File Path="F_Login.dfm"/>
+    <File Path="splashScreen.pas"/>
+    <File Path="splashScreen.dfm"/>
+    <File Path="FAlmacen_Venta.pas"/>
+    <File Path="FAlmacen_Venta.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

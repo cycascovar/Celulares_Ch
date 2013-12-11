@@ -1,22 +1,15 @@
-unit FGarantia;
+unit FRecargas;
 
 interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, DBGrids, StdCtrls, Menus, DB, ZAbstractRODataset,
+  Dialogs, Grids, DBGrids, Menus, StdCtrls, Buttons, DB, ZAbstractRODataset,
   ZAbstractDataset, ZDataset;
 
 type
-  TFGarantias = class(TForm)
-    DBGrid1: TDBGrid;
-    LComment3: TLabel;
-    Button1: TButton;
+  TF_Recargas = class(TForm)
     Edit1: TEdit;
-    Edit2: TEdit;
-    LComment2: TLabel;
-    Edit3: TEdit;
-    Button2: TButton;
     MainMenu1: TMainMenu;
     Equipos1: TMenuItem;
     Ventadeequipo1: TMenuItem;
@@ -34,12 +27,16 @@ type
     Acercade1: TMenuItem;
     Cmousarelsistema1: TMenuItem;
     Salir1: TMenuItem;
+    DBGrid1: TDBGrid;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     Label1: TLabel;
-    Button3: TButton;
-    DataSource1: TDataSource;
+    Label2: TLabel;
+    Label3: TLabel;
     ZQuery1: TZQuery;
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
+    DataSource1: TDataSource;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,23 +44,22 @@ type
   end;
 
 var
-  FGarantias: TFGarantias;
+  F_Recargas: TF_Recargas;
 
 implementation
-uses
-    FGarantia_Alta;
+uses F_RecargasAlta;
 {$R *.dfm}
 
-procedure TFGarantias.Button2Click(Sender: TObject);
+procedure TF_Recargas.BitBtn1Click(Sender: TObject);
 begin
-    FGarantiasAlta.Enabled := false;
-    FGarantiasAlta := TFGarantiasAlta.Create(self);
-    FGarantiasAlta.ShowModal;
+    F_Recargas.Close;
 end;
 
-procedure TFGarantias.Button3Click(Sender: TObject);
+procedure TF_Recargas.BitBtn2Click(Sender: TObject);
 begin
-    FGarantias.Close;
+    FRecargasAlta.Enabled := false;
+    FRecargasAlta := TFRecargasAlta.Create(self);
+    FRecargasAlta.ShowModal;
 end;
 
 end.

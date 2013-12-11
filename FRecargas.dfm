@@ -1,9 +1,9 @@
-object FGarantias: TFGarantias
+object F_Recargas: TF_Recargas
   Left = 0
   Top = 0
-  Caption = 'Equipos en garant'#237'a'
-  ClientHeight = 524
-  ClientWidth = 918
+  Caption = 'Recargas'
+  ClientHeight = 428
+  ClientWidth = 535
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,45 +14,25 @@ object FGarantias: TFGarantias
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object LComment3: TLabel
-    Left = 8
-    Top = 271
-    Width = 601
-    Height = 13
-    Caption = 
-      'Al seleccionar un equipo del grid, se va a poder eliminar de la ' +
-      'base de datos al dar clic sobre el boton "ya no esta en garantia' +
-      '"'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHighlight
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
-  object LComment2: TLabel
-    Left = 8
-    Top = 43
-    Width = 443
-    Height = 13
-    Caption = 
-      'Los text edit de abajo van actuar como filtros, buscando en el g' +
-      'rid y no en la base de datos.'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHighlight
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 466
+    Width = 81
+    Height = 24
+    Caption = 'Recargas'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 200
+    Top = 53
+    Width = 277
     Height = 13
-    Caption = 
-      'En esta ventana se mostraran los equipos que estan en garantia, ' +
-      'asi como su fecha de recepcion'
+    Caption = 'los codigos pueden estar asociados a uno o mas  numeros'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHighlight
     Font.Height = -11
@@ -60,12 +40,35 @@ object FGarantias: TFGarantias
     Font.Style = []
     ParentFont = False
   end
-  object DBGrid1: TDBGrid
+  object Label3: TLabel
     Left = 8
-    Top = 96
-    Width = 905
-    Height = 169
+    Top = 34
+    Width = 516
+    Height = 13
+    Caption = 
+      'Al leer un codigo con el lector de codigo de barras, se mostrar'#225 +
+      'n los celulares (numeros) asociados al c'#243'digo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 24
+    Top = 53
+    Width = 170
+    Height = 21
+    NumbersOnly = True
     TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 80
+    Width = 449
+    Height = 298
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -74,100 +77,42 @@ object FGarantias: TFGarantias
     Columns = <
       item
         Expanded = False
-        FieldName = 'Marca'
-        Width = 86
+        FieldName = 'Codigo'
+        Width = 174
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'Modelo'
-        Width = 104
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'IMEI'
-        Width = 140
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Accesorios'
-        Width = 160
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Due'#241'o'
-        Width = 147
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Telefono de contacto'
-        Width = 149
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'Fecha recibido'
-        Width = 90
+        FieldName = 'Celulares asignados'
+        Width = 235
         Visible = True
       end>
   end
-  object Button1: TButton
-    Left = 8
-    Top = 301
-    Width = 129
-    Height = 25
-    Caption = 'Ya no est'#225' en garant'#237'a'
-    TabOrder = 1
-  end
-  object Edit1: TEdit
-    Left = 215
-    Top = 69
-    Width = 138
-    Height = 21
-    TabOrder = 2
-    Text = 'IMEI'
-  end
-  object Edit2: TEdit
-    Left = 112
-    Top = 69
-    Width = 97
-    Height = 21
-    TabOrder = 3
-    Text = 'MODELO'
-  end
-  object Edit3: TEdit
-    Left = 24
-    Top = 69
-    Width = 82
-    Height = 21
-    TabOrder = 4
-    Text = 'MARCA'
-  end
-  object Button2: TButton
-    Left = 192
-    Top = 301
-    Width = 129
-    Height = 25
-    Caption = 'Agregar otro equipo'
-    TabOrder = 5
-    OnClick = Button2Click
-  end
-  object Button3: TButton
-    Left = 835
-    Top = 301
+  object BitBtn1: TBitBtn
+    Left = 398
+    Top = 384
     Width = 75
-    Height = 25
+    Height = 41
     Caption = 'Cerrar'
-    TabOrder = 6
-    OnClick = Button3Click
+    DoubleBuffered = True
+    ParentDoubleBuffered = False
+    TabOrder = 2
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 24
+    Top = 384
+    Width = 121
+    Height = 41
+    Caption = 'Agregar otro codigo'
+    DoubleBuffered = True
+    ParentDoubleBuffered = False
+    TabOrder = 3
+    OnClick = BitBtn2Click
   end
   object MainMenu1: TMainMenu
-    Left = 832
-    Top = 8
+    Left = 128
+    Top = 160
     object Equipos1: TMenuItem
       Caption = 'Inventario'
       object Ventadeequipo1: TMenuItem
@@ -217,13 +162,13 @@ object FGarantias: TFGarantias
       Caption = 'Salir'
     end
   end
-  object DataSource1: TDataSource
-    Left = 784
-    Top = 216
-  end
   object ZQuery1: TZQuery
     Params = <>
-    Left = 720
-    Top = 192
+    Left = 368
+    Top = 184
+  end
+  object DataSource1: TDataSource
+    Left = 392
+    Top = 232
   end
 end

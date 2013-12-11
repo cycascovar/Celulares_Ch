@@ -55,8 +55,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 206
-    Top = 10
+    Left = 174
+    Top = 8
     Width = 77
     Height = 21
     Caption = '{sucursal}'

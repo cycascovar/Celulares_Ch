@@ -523,7 +523,7 @@ object FLogin: TFLogin
     Width = 121
     Height = 21
     TabOrder = 1
-    Text = 'usuario'
+    Text = '1'
   end
   object password: TEdit
     Left = 72
@@ -532,7 +532,7 @@ object FLogin: TFLogin
     Height = 21
     PasswordChar = '*'
     TabOrder = 2
-    Text = 'usuario'
+    Text = '1'
     OnKeyPress = passwordKeyPress
   end
   object exit: TButton
@@ -547,7 +547,7 @@ object FLogin: TFLogin
   object ZCDesarrollo: TZConnection
     Catalog = 'chapulhuacan'
     Protocol = 'mysql-5'
-    HostName = 'localhost'
+    HostName = '127.0.0.1'
     Database = 'chapulhuacan'
     User = 'root'
     Password = 'toor'

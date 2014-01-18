@@ -5,38 +5,31 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, Menus, StdCtrls, Buttons, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset;
+  ZAbstractDataset, ZDataset, pBarcode, pCode128, ComCtrls, pEAN128;
 
 type
   TF_Recargas = class(TForm)
     Edit1: TEdit;
-    MainMenu1: TMainMenu;
-    Equipos1: TMenuItem;
-    Ventadeequipo1: TMenuItem;
-    Recargas1: TMenuItem;
-    Generarcdigos1: TMenuItem;
-    Garantas1: TMenuItem;
-    Llenarsolicitud1: TMenuItem;
-    Bajadegaranta1: TMenuItem;
-    Verequiposengaranta1: TMenuItem;
-    Reparacin1: TMenuItem;
-    Llenarsolicitud2: TMenuItem;
-    Bajadereparacin1: TMenuItem;
-    Verequiposenreparacin1: TMenuItem;
-    Ayuda1: TMenuItem;
-    Acercade1: TMenuItem;
-    Cmousarelsistema1: TMenuItem;
-    Salir1: TMenuItem;
     DBGrid1: TDBGrid;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     ZQuery1: TZQuery;
     DataSource1: TDataSource;
+    codigogenerado: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Button1: TButton;
+    celulares: TMemo;
+    Button3: TButton;
+    ZQRecargas: TZQuery;
+    DSRecargas: TDataSource;
+    StatusBar1: TStatusBar;
+    Barcode_EAN1281: TBarcode_EAN128;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +53,11 @@ begin
     FRecargasAlta.Enabled := false;
     FRecargasAlta := TFRecargasAlta.Create(self);
     FRecargasAlta.ShowModal;
+end;
+
+procedure TF_Recargas.Button1Click(Sender: TObject);
+begin
+    //aqui algoritmo para generar los codigos
 end;
 
 end.

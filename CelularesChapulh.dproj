@@ -65,17 +65,8 @@
 			<DCCReference Include="FReparacion.pas">
 				<Form>FReparaciones</Form>
 			</DCCReference>
-			<DCCReference Include="FGarantia_Alta.pas">
-				<Form>FGarantiasAlta</Form>
-			</DCCReference>
-			<DCCReference Include="FReparacion_Alta.pas">
-				<Form>FReparacionesAlta</Form>
-			</DCCReference>
 			<DCCReference Include="FAlmacen_Local.pas">
 				<Form>FAlmacenLocal</Form>
-			</DCCReference>
-			<DCCReference Include="FAlmacen_Venta.pas">
-				<Form>FAlmacenVenta</Form>
 			</DCCReference>
 			<DCCReference Include="FAcerca_De.pas">
 				<Form>FAcercaDe</Form>
@@ -87,6 +78,10 @@
 				<Form>FRecargasAlta</Form>
 			</DCCReference>
 			<DCCReference Include="SQLMovimientos.pas"/>
+			<DCCReference Include="uUtils.pas"/>
+			<DCCReference Include="FR_VentaDiario.pas">
+				<Form>FRVentaDiario</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
@@ -137,14 +132,15 @@
 						<Source Name="MainSource">CelularesChapulh.dpr</Source>
 					</Source>
 					<Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp150.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k150.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
 					</Excluded_Packages>
 				</Delphi.Personality>
 				<Platforms>
 					<Platform value="Win32">True</Platform>
 				</Platforms>
+				<ModelSupport>False</ModelSupport>
 			</BorlandProject>
 			<ProjectFileVersion>12</ProjectFileVersion>
 		</ProjectExtensions>

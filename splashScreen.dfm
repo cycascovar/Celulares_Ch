@@ -4,9 +4,9 @@ object Form2: TForm2
   BorderIcons = [biMinimize, biMaximize]
   BorderStyle = bsNone
   Caption = 'Form2'
-  ClientHeight = 295
-  ClientWidth = 477
-  Color = clBtnFace
+  ClientHeight = 279
+  ClientWidth = 481
+  Color = clBtnHighlight
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -18,51 +18,38 @@ object Form2: TForm2
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 150
-    Height = 23
+    Width = 211
+    Height = 33
     Caption = 'Celulares Chapulh'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -27
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 101
-    Top = 141
-    Width = 182
-    Height = 23
-    Caption = '{nombre del sistema}'
+    Left = 21
+    Top = 105
+    Width = 418
+    Height = 33
+    Caption = 'Sistema para control de inventarios'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -27
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 289
+    Left = 377
     Top = 144
-    Width = 128
+    Width = 88
     Height = 19
-    Caption = 'versi'#243'n preliminar'
+    Caption = 'versi'#243'n 1.00'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentFont = False
-  end
-  object Label4: TLabel
-    Left = 174
-    Top = 8
-    Width = 77
-    Height = 21
-    Caption = '{sucursal}'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -17
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False

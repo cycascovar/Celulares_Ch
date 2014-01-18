@@ -17,6 +17,8 @@ type
     Label3: TLabel;
     Label4: TLabel;
     sucursal: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     procedure FormClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure LinkLabel1Click(Sender: TObject);
@@ -28,7 +30,7 @@ type
   end;
 
 var
-  FAcercaDe: TFAcercaDe;
+    FAcercaDe: TFAcercaDe;
 
 implementation
 uses
@@ -51,20 +53,7 @@ var
   p:pointer;
   s:cardinal;
 begin
-    ZQSucursal := TZQuery.Create(self);
-    ZQSucursal.Connection := FPrincipal.ZConexion;
-    ZQSucursal.ShowRecordTypes := [usUnmodified,usModified,usInserted];
-    ZQSucursal.Options := [doCalcDefaults];
-    ZQSucursal.AutoCalcFields := true;
-
-    ZQSucursal.Close;
-    ZQSucursal.SQL.Clear;
-    ZQSucursal.SQL.Add('SELECT sucursal FROM sucursal');
-    ZQSucursal.SQL.Add('JOIN empleado ON empleado.idsucursal = sucursal.idsucursal');
-    ZQSucursal.SQL.Add('AND empleado.idempleado = '+IntToStr(Fprincipal.idEmpleado)+'');
-    ZQSucursal.Open;
-
-    sucursal.Caption := ZQSucursal.FieldByName('sucursal').AsString;
+    sucursal.Caption := FPrincipal.sucursal;
     sucursal.Update;
 end;
 

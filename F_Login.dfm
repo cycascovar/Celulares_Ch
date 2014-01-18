@@ -2,10 +2,10 @@ object FLogin: TFLogin
   Left = 0
   Top = 0
   BorderIcons = []
-  BorderStyle = bsDialog
+  BorderStyle = bsSingle
   Caption = 'Entrar al sistema'
-  ClientHeight = 156
-  ClientWidth = 299
+  ClientHeight = 184
+  ClientWidth = 263
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,15 +20,15 @@ object FLogin: TFLogin
   PixelsPerInch = 96
   TextHeight = 13
   object LUsuario: TLabel
-    Left = 10
-    Top = 64
+    Left = 26
+    Top = 42
     Width = 36
     Height = 13
     Caption = 'Usuario'
   end
   object LPass: TLabel
-    Left = 10
-    Top = 91
+    Left = 26
+    Top = 101
     Width = 56
     Height = 13
     Caption = 'Contrase'#241'a'
@@ -47,10 +47,10 @@ object FLogin: TFLogin
     ParentFont = False
   end
   object Image1: TImage
-    Left = 211
-    Top = 24
-    Width = 87
-    Height = 85
+    Left = 173
+    Top = 61
+    Width = 82
+    Height = 80
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000000800000
       00800806000000C33E61CB0000000467414D410000D904DCB2DA020000385F49
@@ -509,8 +509,8 @@ object FLogin: TFLogin
     Proportional = True
   end
   object login: TButton
-    Left = 56
-    Top = 123
+    Left = 40
+    Top = 155
     Width = 75
     Height = 25
     Caption = 'Ingresar'
@@ -518,26 +518,26 @@ object FLogin: TFLogin
     OnClick = loginClick
   end
   object username: TEdit
-    Left = 72
+    Left = 26
     Top = 61
     Width = 121
     Height = 21
     TabOrder = 1
-    Text = 'usuario'
+    Text = 'admin'
   end
   object password: TEdit
-    Left = 72
-    Top = 88
+    Left = 26
+    Top = 120
     Width = 121
     Height = 21
     PasswordChar = '*'
     TabOrder = 2
-    Text = 'usuario'
+    Text = 'admin'
     OnKeyPress = passwordKeyPress
   end
   object exit: TButton
-    Left = 150
-    Top = 123
+    Left = 134
+    Top = 155
     Width = 75
     Height = 25
     Caption = 'Salir'
@@ -545,13 +545,13 @@ object FLogin: TFLogin
     OnClick = exitClick
   end
   object ZCDesarrollo: TZConnection
-    Catalog = 'chapulhuacan'
+    Catalog = 'chdesarrollo'
     Protocol = 'mysql-5'
-    HostName = 'localhost'
-    Database = 'chapulhuacan'
+    HostName = '192.168.1.70'
+    Database = 'chdesarrollo'
     User = 'root'
     Password = 'toor'
-    Left = 168
-    Top = 8
+    Left = 184
+    Top = 16
   end
 end

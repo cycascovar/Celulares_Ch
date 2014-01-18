@@ -55,6 +55,7 @@ end;
 
 procedure TFLogin.FormShow(Sender: TObject);
 begin
+    Application.MainFormOnTaskBar := true;
     ZQLogin := TZQuery.Create(self);
     ZQLogin.Connection := ZCDesarrollo;
     ZQLogin.ShowRecordTypes := [usUnmodified,usModified,usInserted];
@@ -75,15 +76,15 @@ begin
         ZQLogin.SQL.Clear;
         ZQLogin.SQL.Add('SELECT idempleado, empleado, idsucursal');
         ZQLogin.SQL.Add('FROM empleado');
-        ZQLogin.SQL.Add('WHERE empleado="'+username.Text+'" AND password=MD5("'+password.Text+'")');
+        ZQLogin.SQL.Add('WHERE empleado="'+username.Text+'" AND password="'+password.Text+'"');
         ZQLogin.ExecSQL;
         ZQLogin.Open;
 
         if ZQLogin.FieldByName('idempleado').IsNull <> true then
         begin
             FLogin.Visible := false;
-//            FPrincipal.Enabled := false;
-  //          FPrincipal := TFPrincipal.Create(self);
+            FPrincipal.Enabled := false;
+            FPrincipal := TFPrincipal.Create(self);
             FPrincipal.ShowModal;
         end
         else
@@ -91,8 +92,8 @@ begin
             Application.MessageBox('Usuario o contraseña incorrectos.','Acceso denegado', MB_ICONSTOP);
             ZQMovimiento.Close;
             ZQMovimiento.SQL.Clear;
-            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles)');
-            ZQMovimiento.SQL.Add('VALUES ("Intento de login fallido.","El usuario: '+username.Text+', ingreso datos incorrectos.")');
+            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles,empleado,fecha)');
+            ZQMovimiento.SQL.Add('VALUES ("Intento de login fallido.","El usuario: '+username.Text+', ingreso datos incorrectos.","'+username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
             ZQMovimiento.ExecSQL;
         end;
     except
@@ -133,8 +134,8 @@ begin
                 Application.MessageBox( 'Usuario o contraseña incorrectos.','Acceso denegado', MB_ICONSTOP);
                 ZQMovimiento.Close;
                 ZQMovimiento.SQL.Clear;
-                ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles)');
-                ZQMovimiento.SQL.Add('VALUES ("Intento de login fallido.","El usuario: '+username.Text+', ingreso datos incorrectos.")');
+                ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles,empleado,fecha)');
+                ZQMovimiento.SQL.Add('VALUES ("Intento de login fallido.","El usuario: '+username.Text+', ingreso datos incorrectos.","'+username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
                 ZQMovimiento.ExecSQL;
             end;
     except
@@ -143,8 +144,8 @@ begin
             Application.MessageBox('No se puede conectar a la base de datos.','Atención',MB_ICONINFORMATION);
             ZQMovimiento.Close;
             ZQMovimiento.SQL.Clear;
-            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles)');
-            ZQMovimiento.SQL.Add('VALUES ("Intento de conexión a la BD.","Se realizó un intento fallido el día '+DateToStr(Now())+'.")');
+            ZQMovimiento.SQL.Add('INSERT INTO empleado_movimiento (movimiento, movimiento_detalles,empleado,fecha)');
+            ZQMovimiento.SQL.Add('VALUES ("Intento de conexión a la BD.","Se realizó un intento fallido el día '+DateToStr(Now())+'.","'+username.Text+'","'+FormatDateTime('YYYY/MM/DD',Date())+'")');
             ZQMovimiento.ExecSQL;
         end;
         end;

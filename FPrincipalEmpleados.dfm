@@ -2,7 +2,7 @@ object FPrincipal: TFPrincipal
   Left = 0
   Top = 0
   Caption = 'Principal - Celulares Chapulh'
-  ClientHeight = 302
+  ClientHeight = 320
   ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,6 +13,7 @@ object FPrincipal: TFPrincipal
   Menu = MainMenu1
   OldCreateOrder = False
   OnClose = FormClose
+  OnCreate = FormCreate
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -32,9 +33,9 @@ object FPrincipal: TFPrincipal
   object Label2: TLabel
     Left = 116
     Top = 8
-    Width = 49
+    Width = 90
     Height = 24
-    Caption = '$user'
+    Caption = '               '
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
@@ -1833,7 +1834,7 @@ object FPrincipal: TFPrincipal
     Proportional = True
   end
   object Image4: TImage
-    Left = 528
+    Left = 544
     Top = 128
     Width = 113
     Height = 105
@@ -2783,8 +2784,8 @@ object FPrincipal: TFPrincipal
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 512
-    Top = 245
+    Left = 528
+    Top = 248
     Width = 153
     Height = 49
     Caption = 'Ver equipos en reparaci'#243'n'
@@ -2794,21 +2795,38 @@ object FPrincipal: TFPrincipal
   object Button5: TButton
     AlignWithMargins = True
     Left = 704
-    Top = 249
+    Top = 248
     Width = 89
     Height = 49
     Caption = 'Salir del sistema'
     TabOrder = 4
     OnClick = Button5Click
   end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 301
+    Width = 808
+    Height = 19
+    BiDiMode = bdRightToLeft
+    Panels = <
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = 'Fecha'
+        Width = 50
+      end
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = '  '
+        Width = 50
+      end>
+    ParentBiDiMode = False
+  end
   object MainMenu1: TMainMenu
     Left = 408
     object Equipos1: TMenuItem
       Caption = 'Inventario'
-      object Ventadeequipo1: TMenuItem
-        Caption = 'Venta de equipo'
-        OnClick = Ventadeequipo1Click
-      end
       object Verequiposenalmacen1: TMenuItem
         Caption = 'Ver equipos en almacen'
         OnClick = Verequiposenalmacen1Click
@@ -2816,10 +2834,6 @@ object FPrincipal: TFPrincipal
     end
     object Recargas1: TMenuItem
       Caption = 'Recargas'
-      object Generarcdigos1: TMenuItem
-        Caption = 'Asignar cliente'
-        OnClick = Generarcdigos1Click
-      end
       object Vercelularesasignados1: TMenuItem
         Caption = 'Ver celulares asignados'
         OnClick = Vercelularesasignados1Click
@@ -2827,21 +2841,31 @@ object FPrincipal: TFPrincipal
     end
     object Garantas1: TMenuItem
       Caption = 'Garant'#237'as'
-      object Llenarsolicitud1: TMenuItem
-        Caption = 'Alta de garant'#237'a'
-        OnClick = Llenarsolicitud1Click
-      end
       object Verequiposengaranta1: TMenuItem
         Caption = 'Ver equipos en garant'#237'a'
         OnClick = Verequiposengaranta1Click
       end
     end
+    object Reportes1: TMenuItem
+      Caption = 'Reportes'
+      object Equipos2: TMenuItem
+        Caption = 'Equipos'
+        object Garanta1: TMenuItem
+          Caption = 'Garant'#237'a'
+        end
+        object Reparacin2: TMenuItem
+          Caption = 'Reparaci'#243'n'
+        end
+      end
+      object Inventario1: TMenuItem
+        Caption = 'Inventario'
+      end
+      object Ventasdeldia1: TMenuItem
+        Caption = 'Ventas del dia'
+      end
+    end
     object Reparacin1: TMenuItem
       Caption = 'Reparaciones'
-      object Llenarsolicitud2: TMenuItem
-        Caption = 'Alta de reparaci'#243'n'
-        OnClick = Llenarsolicitud2Click
-      end
       object Verequiposenreparacin1: TMenuItem
         Caption = 'Ver equipos en reparaci'#243'n'
         OnClick = Verequiposenreparacin1Click
@@ -2852,9 +2876,6 @@ object FPrincipal: TFPrincipal
       object Salir2: TMenuItem
         Caption = 'Salir'
         OnClick = Salir2Click
-      end
-      object Iniciarconotrousuario1: TMenuItem
-        Caption = 'Iniciar con otro usuario'
       end
     end
     object Ayuda1: TMenuItem
@@ -2872,10 +2893,10 @@ object FPrincipal: TFPrincipal
     end
   end
   object ZConexion: TZConnection
-    Catalog = 'chapulhuacan'
+    Catalog = 'chdesarrollo'
     Protocol = 'mysql-5'
-    HostName = 'localhost'
-    Database = 'chapulhuacan'
+    HostName = '192.168.1.70'
+    Database = 'chdesarrollo'
     User = 'root'
     Password = 'toor'
     Left = 728
@@ -2886,5 +2907,10 @@ object FPrincipal: TFPrincipal
     Params = <>
     Left = 584
     Top = 32
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 120
+    Top = 304
   end
 end

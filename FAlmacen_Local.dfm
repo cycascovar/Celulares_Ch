@@ -2,19 +2,18 @@ object FAlmacenLocal: TFAlmacenLocal
   Left = 0
   Top = 0
   Caption = 'FAlmacenLocal'
-  ClientHeight = 348
-  ClientWidth = 732
+  ClientHeight = 560
+  ClientWidth = 796
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -17
-  Font.Name = 'Sakkal Majalla'
+  Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
   OnShow = FormShow
   PixelsPerInch = 96
-  TextHeight = 24
+  TextHeight = 21
   object Label1: TLabel
     Left = 16
     Top = 8
@@ -42,8 +41,8 @@ object FAlmacenLocal: TFAlmacenLocal
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 280
-    Top = 49
+    Left = 16
+    Top = 57
     Width = 293
     Height = 24
     Caption = 'Se podra ingresar los ultimos cuatro digitos para el filtro.'
@@ -58,7 +57,7 @@ object FAlmacenLocal: TFAlmacenLocal
   end
   object Label4: TLabel
     Left = 308
-    Top = 299
+    Top = 288
     Width = 265
     Height = 24
     Caption = 'En caso de ser requerido, se puede exportar a Excel'
@@ -71,9 +70,9 @@ object FAlmacenLocal: TFAlmacenLocal
     ParentColor = False
     ParentFont = False
   end
-  object Edit1: TEdit
-    Left = 16
-    Top = 79
+  object marcaCel: TEdit
+    Left = 15
+    Top = 83
     Width = 121
     Height = 21
     Font.Charset = DEFAULT_CHARSET
@@ -83,26 +82,39 @@ object FAlmacenLocal: TFAlmacenLocal
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnKeyUp = marcaCelKeyUp
   end
   object Edit2: TEdit
-    Left = 143
-    Top = 79
+    Left = 142
+    Top = 83
     Width = 121
-    Height = 32
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object Edit3: TEdit
-    Left = 270
-    Top = 79
+    Left = 269
+    Top = 83
     Width = 219
-    Height = 32
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
   end
   object BitBtn1: TBitBtn
     Left = 8
     Top = 288
     Width = 105
-    Height = 49
+    Height = 35
     Caption = 'Vender'
     DoubleBuffered = True
     ParentDoubleBuffered = False
@@ -110,31 +122,20 @@ object FAlmacenLocal: TFAlmacenLocal
     OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
-    Left = 168
+    Left = 173
     Top = 288
     Width = 129
-    Height = 49
-    Caption = 'Exportar a Excel'
+    Height = 35
+    Caption = 'Generar relacion Excel'
     DoubleBuffered = True
     ParentDoubleBuffered = False
     TabOrder = 4
     OnClick = BitBtn2Click
   end
-  object BitBtn3: TBitBtn
-    Left = 608
-    Top = 288
-    Width = 105
-    Height = 49
-    Caption = 'Cerrar'
-    DoubleBuffered = True
-    ParentDoubleBuffered = False
-    TabOrder = 5
-    OnClick = BitBtn3Click
-  end
   object GridAlmacen: TDBGrid
     Left = 8
-    Top = 117
-    Width = 716
+    Top = 110
+    Width = 780
     Height = 172
     DataSource = DSAlmacen
     Font.Charset = DEFAULT_CHARSET
@@ -144,7 +145,7 @@ object FAlmacenLocal: TFAlmacenLocal
     Font.Style = []
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -17
@@ -161,77 +162,298 @@ object FAlmacenLocal: TFAlmacenLocal
       item
         Expanded = False
         FieldName = 'Modelo'
-        Width = 127
+        Width = 119
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'IMEI'
-        Width = 394
+        Width = 189
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ICCID'
+        Width = 168
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Precio'
+        Width = 88
         Visible = True
       end>
   end
   object barraP: TProgressBar
     Left = 16
-    Top = 184
-    Width = 697
+    Top = 208
+    Width = 761
     Height = 25
     Step = 1
-    TabOrder = 7
+    TabOrder = 6
   end
-  object MainMenu1: TMainMenu
-    BiDiMode = bdLeftToRight
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 336
+    Width = 345
+    Height = 177
+    Caption = 'Datos del cliente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Sakkal Majalla'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    object Label5: TLabel
+      Left = 40
+      Top = 32
+      Width = 43
+      Height = 24
+      Caption = 'Nombre'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 40
+      Top = 62
+      Width = 46
+      Height = 24
+      Caption = 'Telefono'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label7: TLabel
+      Left = 40
+      Top = 96
+      Width = 50
+      Height = 24
+      Caption = 'Domicilio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object nombreCliente: TEdit
+      Left = 104
+      Top = 32
+      Width = 121
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+    object telefonoCliente: TEdit
+      Left = 104
+      Top = 63
+      Width = 121
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object domicilioCliente: TEdit
+      Left = 102
+      Top = 101
+      Width = 227
+      Height = 21
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Left = 40
+      Top = 141
+      Width = 145
+      Height = 33
+      Caption = 'Limpiar datos cliente'
+      TabOrder = 3
+      OnClick = Button1Click
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 372
+    Top = 336
+    Width = 416
+    Height = 177
+    Caption = 'Datos del telefono'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Sakkal Majalla'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+    object Label8: TLabel
+      Left = 40
+      Top = 32
+      Width = 32
+      Height = 24
+      Caption = 'Marca'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 40
+      Top = 62
+      Width = 41
+      Height = 24
+      Caption = 'Modelo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 40
+      Top = 92
+      Width = 23
+      Height = 24
+      Caption = 'IMEI'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 39
+      Top = 150
+      Width = 32
+      Height = 24
+      Caption = 'Precio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object marcaCelular: TLabel
+      Left = 90
+      Top = 32
+      Width = 54
+      Height = 24
+      Caption = '                  '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object modeloCelular: TLabel
+      Left = 87
+      Top = 62
+      Width = 54
+      Height = 24
+      Caption = '                  '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object imeiCelular: TLabel
+      Left = 90
+      Top = 92
+      Width = 54
+      Height = 24
+      Caption = '                  '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object precioCelular: TLabel
+      Left = 77
+      Top = 150
+      Width = 54
+      Height = 24
+      Caption = '                  '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = 'Sakkal Majalla'
+      Font.Style = []
+      ParentFont = False
+    end
+    object _iccidcelular: TLabel
+      Left = 39
+      Top = 122
+      Width = 33
+      Height = 24
+      Caption = 'ICCID'
+    end
+    object iccidcelular: TLabel
+      Left = 96
+      Top = 122
+      Width = 87
+      Height = 24
+      Caption = '                             '
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 541
+    Width = 796
+    Height = 19
+    BiDiMode = bdRightToLeft
+    Panels = <
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = 'Fecha'
+        Width = 50
+      end
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = '  '
+        Width = 50
+      end>
     ParentBiDiMode = False
-    Left = 656
-    Top = 16
-    object Equipos1: TMenuItem
-      Caption = 'Inventario'
-      object Ventadeequipo1: TMenuItem
-        Caption = 'Venta de equipo'
-      end
-    end
-    object Recargas1: TMenuItem
-      Caption = 'Recargas'
-      object Generarcdigos1: TMenuItem
-        Caption = 'Asignar cliente'
-      end
-    end
-    object Garantas1: TMenuItem
-      Caption = 'Garant'#237'as'
-      object Llenarsolicitud1: TMenuItem
-        Caption = 'Alta de garant'#237'a'
-      end
-      object Bajadegaranta1: TMenuItem
-        Caption = 'Baja de garant'#237'a'
-      end
-      object Verequiposengaranta1: TMenuItem
-        Caption = 'Ver equipos en garant'#237'a'
-      end
-    end
-    object Reparacin1: TMenuItem
-      Caption = 'Reparaciones'
-      object Llenarsolicitud2: TMenuItem
-        Caption = 'Alta de reparaci'#243'n'
-      end
-      object Bajadereparacin1: TMenuItem
-        Caption = 'Baja de reparaci'#243'n'
-      end
-      object Verequiposenreparacin1: TMenuItem
-        Caption = 'Ver equipos en reparaci'#243'n'
-      end
-    end
-    object Ayuda1: TMenuItem
-      Caption = 'Ayuda'
-      object Acercade1: TMenuItem
-        Caption = 'Acerca de'
-      end
-      object Cmousarelsistema1: TMenuItem
-        Caption = 'C'#243'mo usar el sistema'
-      end
-    end
-    object Salir1: TMenuItem
-      Caption = 'Salir'
-    end
+  end
+  object Button2: TButton
+    Left = 372
+    Top = 44
+    Width = 93
+    Height = 33
+    Caption = 'Ver todos'
+    TabOrder = 10
+    OnClick = Button2Click
   end
   object DSAlmacen: TDataSource
     DataSet = ZQAlmacen
@@ -243,5 +465,11 @@ object FAlmacenLocal: TFAlmacenLocal
     Params = <>
     Left = 608
     Top = 56
+  end
+  object ZQVentas: TZQuery
+    Params = <>
+    DataSource = DSAlmacen
+    Left = 280
+    Top = 352
   end
 end

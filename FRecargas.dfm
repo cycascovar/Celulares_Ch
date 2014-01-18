@@ -2,15 +2,14 @@ object F_Recargas: TF_Recargas
   Left = 0
   Top = 0
   Caption = 'Recargas'
-  ClientHeight = 428
-  ClientWidth = 535
+  ClientHeight = 658
+  ClientWidth = 516
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
@@ -55,6 +54,40 @@ object F_Recargas: TF_Recargas
     Font.Style = []
     ParentFont = False
   end
+  object codigogenerado: TLabel
+    Left = 98
+    Top = 410
+    Width = 45
+    Height = 13
+    Caption = '               '
+  end
+  object Label5: TLabel
+    Left = 34
+    Top = 410
+    Width = 37
+    Height = 13
+    Caption = 'Codigo:'
+  end
+  object Label6: TLabel
+    Left = 34
+    Top = 450
+    Width = 94
+    Height = 13
+    Caption = 'Celular o celulares: '
+  end
+  object Label7: TLabel
+    Left = 138
+    Top = 521
+    Width = 182
+    Height = 13
+    Caption = 'Separar los numeros con una coma ","'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clHighlight
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
   object Edit1: TEdit
     Left = 24
     Top = 53
@@ -88,81 +121,53 @@ object F_Recargas: TF_Recargas
         Visible = True
       end>
   end
-  object BitBtn1: TBitBtn
-    Left = 398
-    Top = 384
-    Width = 75
-    Height = 41
-    Caption = 'Cerrar'
-    DoubleBuffered = True
-    ParentDoubleBuffered = False
+  object Button1: TButton
+    Left = 360
+    Top = 546
+    Width = 113
+    Height = 34
+    Caption = 'Generar otro c'#243'digo'
     TabOrder = 2
-    OnClick = BitBtn1Click
+    OnClick = Button1Click
   end
-  object BitBtn2: TBitBtn
-    Left = 24
-    Top = 384
-    Width = 121
-    Height = 41
-    Caption = 'Agregar otro codigo'
-    DoubleBuffered = True
-    ParentDoubleBuffered = False
+  object celulares: TMemo
+    Left = 135
+    Top = 450
+    Width = 185
+    Height = 65
     TabOrder = 3
-    OnClick = BitBtn2Click
   end
-  object MainMenu1: TMainMenu
-    Left = 128
-    Top = 160
-    object Equipos1: TMenuItem
-      Caption = 'Inventario'
-      object Ventadeequipo1: TMenuItem
-        Caption = 'Venta de equipo'
+  object Button3: TButton
+    Left = 25
+    Top = 546
+    Width = 113
+    Height = 34
+    Caption = 'Guardar'
+    TabOrder = 4
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 639
+    Width = 516
+    Height = 19
+    BiDiMode = bdRightToLeft
+    Panels = <
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = 'Fecha'
+        Width = 50
       end
-    end
-    object Recargas1: TMenuItem
-      Caption = 'Recargas'
-      object Generarcdigos1: TMenuItem
-        Caption = 'Asignar cliente'
-      end
-    end
-    object Garantas1: TMenuItem
-      Caption = 'Garant'#237'as'
-      object Llenarsolicitud1: TMenuItem
-        Caption = 'Alta de garant'#237'a'
-      end
-      object Bajadegaranta1: TMenuItem
-        Caption = 'Baja de garant'#237'a'
-      end
-      object Verequiposengaranta1: TMenuItem
-        Caption = 'Ver equipos en garant'#237'a'
-      end
-    end
-    object Reparacin1: TMenuItem
-      Caption = 'Reparaciones'
-      object Llenarsolicitud2: TMenuItem
-        Caption = 'Alta de reparaci'#243'n'
-      end
-      object Bajadereparacin1: TMenuItem
-        Caption = 'Baja de reparaci'#243'n'
-      end
-      object Verequiposenreparacin1: TMenuItem
-        Caption = 'Ver equipos en reparaci'#243'n'
-      end
-    end
-    object Ayuda1: TMenuItem
-      Caption = 'Ayuda'
-      object Acercade1: TMenuItem
-        Caption = 'Acerca de'
-      end
-      object Cmousarelsistema1: TMenuItem
-        Caption = 'C'#243'mo usar el sistema'
-      end
-    end
-    object Salir1: TMenuItem
-      Caption = 'Salir'
-    end
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = '  '
+        Width = 50
+      end>
+    ParentBiDiMode = False
   end
   object ZQuery1: TZQuery
+    Connection = FPrincipal.ZConexion
     Params = <>
     Left = 368
     Top = 184
@@ -170,5 +175,26 @@ object F_Recargas: TF_Recargas
   object DataSource1: TDataSource
     Left = 392
     Top = 232
+  end
+  object ZQRecargas: TZQuery
+    Params = <>
+    Left = 368
+    Top = 394
+  end
+  object DSRecargas: TDataSource
+    Left = 240
+    Top = 402
+  end
+  object Barcode_EAN1281: TBarcode_EAN128
+    TextPosition = tpBottomOut
+    TextAlignment = taCenter
+    TextFont.Charset = DEFAULT_CHARSET
+    TextFont.Color = clWindowText
+    TextFont.Height = -11
+    TextFont.Name = 'Tahoma'
+    TextFont.Style = []
+    Ratio = 2.000000000000000000
+    Left = 416
+    Top = 464
   end
 end

@@ -1,4 +1,4 @@
-object FAlmacenVenta: TFAlmacenVenta
+object FAlmacenVenta: TFAlmacenVenta //sdfsdf
   Left = 0
   Top = 0
   Caption = 'Ventas: Venta de equipo'
